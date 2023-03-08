@@ -11,9 +11,9 @@ const port = process.env.PORT || 9000;
 // middlewares
 app.use(express.json());
 app.use(cors(
-  // origin = "https://rhospace.github.io/erickPollos"
-  // origin = "http://www.rhospace.com/erickPollos",
-  // origin = "https://www.rhospace.com"
+  origin = "http://www.rhospace.com",
+  origin = 'https://rhospace.github.io/erickPollos',
+  origin = 'https://www.rhospace.com/erickPollos',
 ));
 app.use("/api", productRoute);
 
