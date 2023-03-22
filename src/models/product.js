@@ -6,13 +6,22 @@ const productSchema = mongoose.Schema({
     required: true,
   },
   Codigo: {
+    type: String,
+    required: true
+  },
+  Producto:{
+    type: String,
+    required: true
+  },
+  Precio: {
     type: Number,
     required: true
   },
-  Tp: {
-    type: String,
+  Cantidad: {
+    type: Number,
     required: true
   }
+
 },{versionKey: false});
 
 module.exports = mongoose.model('Product', productSchema);
