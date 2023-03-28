@@ -36,9 +36,9 @@ router.delete("/products/:id", (req, res) => {
 
 router.put("/products/:id", (req, res) => {
   const { id } = req.params;
-  const { Codigo, Linea, Producto, Precio, Cantidad } = req.body;
+  const { Codigo, Linea, Producto, Precio, Cantidad, CortaFecha } = req.body;
   productSchema
-    .updateOne({ _id: id }, { $set: { Codigo, Linea, Producto, Precio, Cantidad  } })
+    .updateOne({ _id: id }, { $set: { Codigo, Linea, Producto, Precio, Cantidad, CortaFecha  } })
     .then((data) => res.json(data))
     .catch((error) => res.json({ message: error }));
 });

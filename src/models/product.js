@@ -20,6 +20,10 @@ const productSchema = mongoose.Schema({
   Cantidad: {
     type: Number,
     required: true
+  }, 
+  CortaFecha: {
+    type: Number,
+    required: true
   }
 
 },{versionKey: false});
